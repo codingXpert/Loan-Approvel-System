@@ -4,7 +4,10 @@ const db = require('./config/dbConnection');
 const app = express();
 const PORT = process.env.port || 8000;
 const table = require('./models/customer');
+const routes = require('./routes')
 
+app.use(express.json());
+app.use("/", routes);
 
 
 app.listen(PORT, (err) => {
