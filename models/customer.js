@@ -12,9 +12,9 @@ function createCustomerTable() {
                 first_name VARCHAR(30) NOT NULL,
                 last_name VARCHAR(30) NOT NULL,
                 age INT NOT NULL,
+                phone_number BIGINT NOT NULL ,
                 monthly_income INT NOT NULL,
-                approved_limit INT NOT NULL DEFAULT 0,
-                phone_number BIGINT NOT NULL 
+                approved_limit INT NOT NULL DEFAULT 0
             )`;
       conn.query(createTableSql, (err, data) => {
         if (err) throw err;
