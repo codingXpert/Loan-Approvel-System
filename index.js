@@ -3,7 +3,8 @@ const dotenv = require('dotenv/config');
 const db = require('./config/dbConnection');
 const app = express();
 const PORT = process.env.port || 8000;
-const table = require('./models/customer');
+const customersTable = require('./models/customer');
+const loansTable = require('./models/loan');
 const routes = require('./routes')
 
 app.use(express.json());
